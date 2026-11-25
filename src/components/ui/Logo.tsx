@@ -11,7 +11,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       </View>
       {!compact && (
         <View>
-          <Text style={styles.name}>PetStock</Text>
+          <Text style={styles.name}>SouzaPet</Text>
           <Text style={styles.subtitle}>Gestão da distribuidora</Text>
         </View>
       )}
