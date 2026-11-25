@@ -16,7 +16,6 @@ import { OrdersScreen } from '../screens/OrdersScreen';
 import { SettingsScreen } from '../screens/SettingsScreen';
 import { ProductsScreen } from '../screens/ProductsScreen';
 import { MovementsScreen } from '../screens/MovementsScreen';
-import { CustomersScreen } from '../screens/CustomersScreen';
 import { NewOrderScreen } from '../screens/NewOrderScreen';
 import { EmployeesScreen } from '../screens/EmployeesScreen';
 
@@ -28,10 +27,8 @@ const moduleConfigs: Partial<Record<ScreenKey, ModuleConfig>> = {
   scanner: { title: 'Leitor de código', subtitle: 'Localização rápida', description: 'Use a câmera para encontrar produtos e registrar operações sem digitação.', icon: 'barcode-outline', action: 'Abrir câmera', features: ['Leitura de EAN e códigos compatíveis', 'Entrada ou saída após leitura', 'Aviso para códigos ainda não cadastrados'] },
   movements: { title: 'Movimentações', subtitle: 'Entradas, saídas e ajustes', description: 'Registre toda alteração de estoque com motivo, responsável e horário.', icon: 'swap-horizontal-outline', action: 'Nova movimentação', features: ['Entrada, saída, ajuste, devolução e perda', 'Validação de quantidade disponível', 'Histórico automático e não apagável'] },
   history: { title: 'Histórico', subtitle: 'Auditoria de ações', description: 'Consulte quem fez cada operação e quando ela aconteceu.', icon: 'time-outline', features: ['Filtro por funcionário e período', 'Antes e depois de alterações', 'Registro protegido para administradores'] },
-  customers: { title: 'Clientes', subtitle: 'Cadastro e consulta', description: 'Encontre rapidamente os clientes antes de criar um novo pedido.', icon: 'people-outline', action: 'Cadastrar cliente', features: ['Dados de contato e endereço', 'Pesquisa por nome, CPF ou CNPJ', 'Pedidos anteriores do cliente'] },
   newOrder: { title: 'Novo pedido', subtitle: 'Carrinho interno', description: 'Selecione o cliente, inclua produtos e confirme o estoque antes de finalizar.', icon: 'cart-outline', action: 'Selecionar cliente', features: ['Pesquisa e inclusão por código de barras', 'Quantidade, preço unitário e subtotal', 'Reserva segura do estoque ao confirmar'] },
   newManifest: { title: 'Novo romaneio', subtitle: 'Separação e conferência', description: 'Agrupe pedidos prontos e consolide automaticamente as quantidades.', icon: 'clipboard-outline', action: 'Selecionar pedidos', features: ['Agrupamento de produtos repetidos', 'Conferência por botão ou código de barras', 'Progresso e finalização somente em 100%'] },
-  employees: { title: 'Funcionários', subtitle: 'Acesso administrativo', description: 'Gerencie usuários, funções e permissões de acesso ao sistema.', icon: 'id-card-outline', action: 'Cadastrar funcionário', features: ['Perfis de administrador e funcionário', 'Ativação e desativação de acesso', 'Permissões aplicadas no app e no backend'] },
   reports: { title: 'Relatórios', subtitle: 'Indicadores operacionais', description: 'Acompanhe movimentações, pedidos, romaneios e alertas de estoque.', icon: 'bar-chart-outline', features: ['Filtros por data e tipo de operação', 'Produtos mais movimentados', 'Resumo de entradas, saídas e cancelamentos'] },
   profile: { title: 'Perfil', subtitle: 'Sua conta', description: 'Consulte seus dados e as permissões disponíveis para sua função.', icon: 'person-circle-outline', features: ['Dados pessoais e contato', 'Função e nível de acesso', 'Alteração segura de senha'] },
 };
@@ -49,8 +46,6 @@ export function RootApp() {
     if (screen === 'inventory') return <InventoryScreen />;
     if (screen === 'products') return <ProductsScreen />;
     if (screen === 'movements') return <MovementsScreen />;
-    if (screen === 'customers') return <CustomersScreen />;
-    if (screen === 'employees') return <EmployeesScreen />;
     if (screen === 'orders') return <OrdersScreen navigate={setScreen} />;
     if (screen === 'newOrder') return <NewOrderScreen navigate={setScreen} />;
     if (screen === 'manifests') return <ManifestsScreen navigate={setScreen} />;

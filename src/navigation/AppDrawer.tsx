@@ -15,9 +15,7 @@ const items: Item[] = [
   { key: 'products', label: 'Produtos', icon: 'pricetags-outline' },
   { key: 'orders', label: 'Pedidos', icon: 'cart-outline' },
   { key: 'manifests', label: 'Romaneios', icon: 'clipboard-outline' },
-  { key: 'customers', label: 'Clientes', icon: 'people-outline' },
   { key: 'movements', label: 'Movimentações', icon: 'swap-horizontal-outline' },
-  { key: 'employees', label: 'Funcionários', icon: 'id-card-outline', adminOnly: true },
   { key: 'reports', label: 'Relatórios', icon: 'bar-chart-outline', adminOnly: true },
   { key: 'profile', label: 'Perfil', icon: 'person-circle-outline' },
   { key: 'settings', label: 'Configurações', icon: 'settings-outline' },
@@ -34,7 +32,7 @@ export function AppDrawer({ visible, active, onClose, onSelect }: Props) {
         <SafeAreaView style={styles.drawer} edges={['top', 'bottom']}>
           <View style={styles.brand}>
             <View style={styles.logo}><Ionicons name="paw" size={25} color={colors.white} /></View>
-            <View><Text style={styles.brandName}>PetStock</Text><Text style={styles.brandSub}>Gestão interna</Text></View>
+            <View><Text style={styles.brandName}>SouzaPet</Text><Text style={styles.brandSub}>Gestão interna</Text></View>
             <Pressable style={styles.close} onPress={onClose}><Ionicons name="close" size={22} color={colors.textMuted} /></Pressable>
           </View>
           <View style={styles.userCard}>

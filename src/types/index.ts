@@ -15,12 +15,10 @@ export type ScreenKey =
   | 'scanner'
   | 'movements'
   | 'history'
-  | 'customers'
   | 'orders'
   | 'newOrder'
   | 'manifests'
   | 'newManifest'
-  | 'employees'
   | 'reports'
   | 'profile'
   | 'settings';
