@@ -1,7 +1,22 @@
+# ==========================================
+# ARQUIVO DE EXCLUSÃO DO GIT (.gitignore)
+# ==========================================
+# Este arquivo define quais pastas e arquivos o Git deve ignorar
+# e não versionar no repositório do projeto PetStock.
+
+# Dependências de pacotes Node.js
 node_modules/
+
+# Pastas de cache e configuração interna do Expo
 .expo/
+
+# Pastas de build / compilação para produção
 dist/
 web-build/
+
+# Arquivos de variáveis de ambiente sensíveis (chaves de API, senhas do banco)
 .env
 .env.local
+
+# Arquivos de log gerados pelo sistema ou gerenciadores de pacotes
 *.log
